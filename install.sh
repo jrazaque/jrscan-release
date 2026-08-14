@@ -20,5 +20,6 @@ echo
 echo "[+] JRSCAN installed successfully!"
 echo "[+] Location: $INSTALL_DIR/jrscan"
 echo
+echo
 echo "Run:"
-echo "  jrscan --help"
+echo "  jrscan"
