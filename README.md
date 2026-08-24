@@ -18,7 +18,7 @@ Host Scanner • CIDR Scanner • Domain Extractor • Port Scanner • IP Range
 ```bash
 pkg install wget unzip -y
 cd /sdcard/Download
-wget -O jrscan.zip "RELEASE_ZIP_DIRECT_LINK_HERE"
+wget -O jrscan.zip "https://github.com/jrazaque/jrscan-release/releases/download/v2.0.0/JR_Script_V2.0.0.dist.zip"
 unzip -o jrscan.zip
 cp -r JR_Script_V2.0.0.dist $HOME/
 chmod +x $HOME/JR_Script_V2.0.0.dist/JR_Script_V2.0.0.bin
