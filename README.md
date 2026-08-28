@@ -1,4 +1,4 @@
-# JR Script V2.1.0
+# JR Script V2.0.0
 
 All-in-One Toolkit for Termux  
 Host Scanner • CIDR Scanner • Domain Extractor • Port Scanner • IP Range • Subdomains • Daily Domains
