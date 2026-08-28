@@ -1,3 +1,8 @@
+---
+
+### install.sh
+
+```bash
 #!/data/data/com.termux/files/usr/bin/bash
 set -e
 ZIP_URL="https://github.com/jrazaque/jrscan-release/releases/download/v2.0.0/JR_Script_V2.1.0_hwid.dist.zip"
