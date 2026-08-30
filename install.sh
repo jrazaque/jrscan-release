@@ -2,11 +2,11 @@
 
 set -e
 
-ZIP_URL="https://github.com/jrazaque/jrscan-release/releases/download/v2.1.0/JR_Script_V2.1.0_hwid.dist.zip"
+ZIP_URL="https://github.com/jrazaque/jrscan-release/releases/download/v2.1.0/JR_Script_V2.1.0.dist.zip"
 ZIP_FILE="$HOME/jrscan.zip"
 INSTALL_DIR="$HOME/.jrscript"
-DIST_DIR="JR_Script_V2.1.0_hwid.dist"
-BIN_NAME="JR_Script_V2.1.0_hwid"
+DIST_DIR="JR_Script_V2.1.0.dist"
+BIN_NAME="JR_Script_V2.1.0"
 COMMAND_NAME="jrscanv2"
 
 echo ""
@@ -24,7 +24,7 @@ wget -O "$ZIP_FILE" "$ZIP_URL"
 
 echo "[+] Extracting files..."
 cd "$HOME"
-rm -rf "$DIST_DIR" "$INSTALL_DIR"
+rm -rf "$INSTALL_DIR"
 unzip -o "$ZIP_FILE"
 
 echo "[+] Installing files..."
@@ -34,13 +34,13 @@ cp -a "$DIST_DIR"/. "$INSTALL_DIR"/
 echo "[+] Setting permissions..."
 chmod 755 "$INSTALL_DIR/$BIN_NAME"
 
-echo "[+] Creating jrscanv2 command..."
+echo "[+] Creating command..."
 
 cat > "$PREFIX/bin/$COMMAND_NAME" << 'EOF'
 #!/data/data/com.termux/files/usr/bin/bash
 export LD_LIBRARY_PATH="$HOME/.jrscript:$PREFIX/lib:$LD_LIBRARY_PATH"
 cd "$HOME/.jrscript"
-exec ./JR_Script_V2.1.0_hwid "$@"
+exec ./JR_Script_V2.1.0 "$@"
 EOF
 
 chmod 755 "$PREFIX/bin/$COMMAND_NAME"
