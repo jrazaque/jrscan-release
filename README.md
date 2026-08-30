@@ -1,4 +1,4 @@
-# **JR Script V2.1.0**
+# JR Script V2.1.0
 
 **All-in-One Toolkit for Termux**
 
@@ -8,7 +8,7 @@
 
 ---
 
-## 🔐 **License**
+## 🔐 License
 
 - **1 Key = 1 Device (HWID Bound)**
 - **Copy your Device ID / HWID** and send it to **[@jrazaque](https://t.me/jrazaque)** to get your key
@@ -17,14 +17,14 @@
 
 ---
 
-## **Requirements**
+## Requirements
 
 - **Termux**
 - **Internet (first install)**
 
 ---
 
-## 📦 **Install**
+## 📦 Install
 
 **Copy and run this command in Termux:**
 
