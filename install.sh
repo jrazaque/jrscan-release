@@ -10,14 +10,18 @@ if [ ! -d "/data/data/com.termux" ]; then
     exit 1
 fi
 
-echo "[1/4] Storage setup..."
+echo "[1/5] Storage setup..."
 termux-setup-storage
 sleep 2
 
-echo "[2/4] Installing packages..."
+echo "[2/5] Installing packages..."
 pkg install wget unzip python -y
 
-echo "[3/4] Downloading JR Script..."
+echo "[3/5] Setting up library path..."
+echo 'export LD_LIBRARY_PATH=/data/data/com.termux/files/usr/lib:$LD_LIBRARY_PATH' >> ~/.bashrc
+export LD_LIBRARY_PATH=/data/data/com.termux/files/usr/lib:$LD_LIBRARY_PATH
+
+echo "[4/5] Downloading JR Script..."
 cd ~
 rm -f jrscanv2.zip jrscanv2
 wget -O jrscanv2.zip https://github.com/jrazaque/jrscan-release/releases/download/v2.1.0/jrscanv2.zip
@@ -27,7 +31,7 @@ if [ ! -f "jrscanv2.zip" ]; then
     exit 1
 fi
 
-echo "[4/4] Extracting..."
+echo "[5/5] Extracting..."
 unzip -o jrscanv2.zip
 chmod +x jrscanv2
 
