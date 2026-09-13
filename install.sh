@@ -1,4 +1,3 @@
-cat > ~/install.sh << 'INSTALL_END'
 #!/bin/bash
 clear
 echo "================================"
@@ -56,7 +55,3 @@ echo "  5. Paste key → Activate"
 echo
 read -p "Press Enter to run..."
 jrscanv2
-INSTALL_END
-
-chmod +x ~/install.sh
-cat ~/install.sh
